@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
     state = {
         users: [],
-        username: 'default' + Math.ceil(Math.random() * 10),
+        username: 'default' + Math.ceil(Math.random() * 10000),
         is_typing: false,
         messages: [
             // new Message({
