@@ -32,9 +32,7 @@ export default class ChatProxy extends EventEmitter {
         });
         console.log('Connecting with username', username);
         // eslint-disable-next-line
-        this.peer = new Peer(username, {
-            host: window.location.hostname, port: 9000, path: '/chat'
-        });
+        this.peer = new Peer(username);
         this.peer.on('open', (userId) => {
             this.setUsername(userId);
         });
