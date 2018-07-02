@@ -2,7 +2,7 @@ const PeerServer = require('peer').PeerServer;
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = parseInt(process.env.PORT) || 4000;
+const port = parseInt(process.env.PORT) || 3000;
 const Topics = {
     USER_CONNECTED: 'user-connected',
     USER_DISCONNECTED: 'user-disconnected',
