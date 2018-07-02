@@ -34,7 +34,7 @@ export default class ChatProxy extends EventEmitter {
         // eslint-disable-next-line
         this.peer = new Peer(username, {
             host: window.location.hostname,
-            port: 80,
+            port: window.location.port,
             path: '/chat',
         });
         this.peer.on('open', (userId) => {
