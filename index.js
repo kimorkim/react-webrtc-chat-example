@@ -16,7 +16,7 @@ app.get('/*', function (req, res) {
 });
 
 const server = app.listen(port, () => {
-    console.log('Server Start');
+    console.log(`Server Start ${port}`);
 });
 
 const io = require('socket.io').listen(server);
