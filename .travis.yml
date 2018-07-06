@@ -1,3 +1,8 @@
+stages:
+  - name: test
+    if: type = pull_request
+  - name: build
+    if: type = push
 language:
 - node_js
 node_js:
@@ -5,10 +10,8 @@ node_js:
 jobs:
   include:
     - stage: test
-      if: |
-        type = pull_request
+      if: type = pull_request
       script: yarn test
     - stage: build
-      if: |
-        type = push
+      if: type = push
       script: yarn build
