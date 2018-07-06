@@ -4,9 +4,9 @@ stages:
   - name: deploy
     if: (type = push) AND (branch = master)
 language:
-- node_js
+  - node_js
 node_js:
-- '8'
+  - '8'
 env:
   - CI: false
 jobs:
