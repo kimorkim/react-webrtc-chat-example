@@ -12,8 +12,6 @@ env:
 jobs:
   include:
     - stage: test
-      if: type = pull_request
       script: yarn test
     - stage: deploy
-      if: (type = push) AND (branch = master)
       script: yarn build
