@@ -14,4 +14,4 @@ jobs:
     - stage: test
       script: yarn test
     - stage: deploy
-      script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+      script: now --public --token $NOW_TOKEN
