@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ChatFeed } from 'react-chat-ui';
+import { ChatFeed, Message } from 'react-chat-ui';
 import './App.css';
 
 class App extends Component {
