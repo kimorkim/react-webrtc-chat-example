@@ -2,9 +2,7 @@ stages:
   - name: test
     if: type = pull_request
   - name: deploy
-    if: |
-      type = push AND \
-      branch = master
+    if: (type = push) AND (branch = master)
 language:
 - node_js
 node_js:
@@ -17,7 +15,5 @@ jobs:
       if: type = pull_request
       script: yarn test
     - stage: deploy
-      if: |
-        type = push AND \
-        branch = master
+      if: (type = push) AND (branch = master)
       script: yarn build
