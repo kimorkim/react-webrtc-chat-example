@@ -11,3 +11,4 @@ jobs:
     - stage: build
       if: |
         type = push
+      script: yarn build
