@@ -19,7 +19,6 @@ class App extends Component {
         this.chatProxy.onUserDisconnected(this.userDisconnected);
     }
     addMessage = ({ content, author }) => {
-        console.log('addMessage', content, author);
         this.setState(({ messages, username }) => {
             return {
                 messages: [
